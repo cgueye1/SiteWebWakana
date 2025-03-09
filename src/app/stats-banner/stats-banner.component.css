@@ -1,0 +1,5 @@
+.banner-container {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('https://img.freepik.com/photos-premium/etudiants-multiraciaux-vue-avant_1108314-465116.jpg?ga=GA1.1.349253673.1725360065&semt=ais_incoming');
+    background-size: cover;
+    background-position: center;
+  }

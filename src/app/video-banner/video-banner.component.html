@@ -1,0 +1,39 @@
+<div class="relative w-full h-[800px] overflow-hidden mt-32">
+  <!-- Container vidéo avec overlay -->
+  <div class="absolute top-3 left-0 w-full h-full">
+<!--    <video #videoElement-->
+<!--           class="w-full h-full object-cover"-->
+<!--           muted-->
+<!--           loop-->
+<!--           playsinline-->
+<!--           preload="metadata"-->
+<!--           poster="assets/images/poster-image.jpg"-->
+<!--    >-->
+<img src="assets/videos/bannervideo.gif" alt="Banner Video" id="background-gif">
+
+   <!--<video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+      <source src="assets/videos/bannervideo.mp4" type="video/mp4">
+    </video>-->
+<!--      <source src="assets/videos/bannervideo.mp4" type="video/mp4">-->
+<!--      &lt;!&ndash; Format de secours &ndash;&gt;-->
+<!--  <source src="assets/videos/bannervideo.webm" type="video/webm">-->
+<!--      Votre navigateur ne supporte pas la lecture de vidéo.-->
+<!--    </video>-->
+
+    <!-- Overlay sombre -->
+    <div class="absolute inset-0"></div>
+  </div>
+
+  <!-- Texte centré -->
+  <div class="relative z-10 container mx-auto px-6 h-full flex items-center justify-center text-white">
+    <h1 @fadeInSlide class="text-6xl md:text-10xl font-bold text-center leading-tight tracking-tight">
+      &lt;Wakana/&gt; <br> 
+    </h1>
+  </div>
+</div>

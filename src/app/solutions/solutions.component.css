@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Fix for possible CSS animation performance issues */
+.transition-transform {
+  will-change: transform;
+}
+
+/* Make indicator dots more visible on hover for better accessibility */
+button.rounded-full:hover {
+  transform: scale(1.2);
+}
+
+/* Better touch support for mobile */
+@media (hover: none) {
+  button.rounded-full {
+    padding: 8px;
+    margin: -4px;
+  }
+}

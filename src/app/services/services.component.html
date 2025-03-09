@@ -1,0 +1,24 @@
+<div class="bg-gradient-to-r from-[#FFFFFF] to-[#FFFFFF] py-16">
+  <div class="max-w-6xl mx-auto text-center px-4">
+    <h2 class="text-4xl font-bold text-[#0190BD] mb-8">Nos Services</h2>
+
+    <!-- Grille responsive avec @for pour la répétition -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      @for (service of services; track service) {
+        <div class="relative group overflow-hidden rounded-lg cursor-pointer h-[350px]"> <!-- Hauteur définie ici -->
+          <img [src]="service.image" [alt]="service.title"
+               class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-105" loading="lazy" alt="Image slider">
+
+          <div class="absolute inset-0 bg-[#E4EAEE] bg-opacity-5 flex flex-col justify-center items-center p-4 group-hover:bg-opacity-100 transition duration-300">
+            <h3 class="text-Black text-lg font-semibold mb-2 opacity-0 group-hover:opacity-100 transition duration-300">
+              {{ service.title }}
+            </h3>
+            <p class="text-black text-sm opacity-0 group-hover:opacity-100 transition duration-300 text-center">
+              {{ service.description }}
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
