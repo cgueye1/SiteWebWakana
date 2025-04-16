@@ -30,13 +30,13 @@
 
 <!-- Navbar principale -->
 <nav [ngClass]="{'bg-[#FFFFFF]': !scrolled(), 'bg-white': scrolled()}"
-     [ngStyle]="{'top': scrolled() ? '0' : '50px'}"
+     [ngStyle]="{'top': scrolled() || !isDesktop() ? '0' : '50px'}"
      class="fixed left-0 w-full text-[#0190BD] py-2 transition-all duration-300 shadow-lg z-20">
 
   <div class="container mx-auto px-4 flex justify-between items-center">
     <!-- Logo -->
     <a href="/" class="flex items-center">
-      <img src="assets/images/logoInnov.png" alt="InnovImpactAfrica" class="w-40">
+      <img src="assets/images/logoinnovimpactafrica.jpg" alt="InnovImpactAfrica" class="w-28">
     </a>
 
     <!-- Menu Desktop (Visible à partir de lg) -->
@@ -53,18 +53,6 @@
       <a (click)="navigateToSection('methods')" class="hover:text-[#EB960B] transition-colors font-bold cursor-pointer">
         Méthodes
       </a>
-     <!--- <a (click)="navigateToSection('solutions')" class="hover:text-[#EB960B] transition-colors font-bold cursor-pointer">
-        Solutions
-      </a>
-      <a (click)="navigateToSection('projects')" class="hover:text-[#EB960B] transition-colors font-bold cursor-pointer">
-        Projets
-      </a>-->
-      <a (click)="navigateToSection('realisations')" class="hover:text-[#EB960B] transition-colors font-bold cursor-pointer">
-        Realisations
-      </a>
-<!--      <a (click)="navigateToSection('news')" class="hover:text-[#EB960B] transition-colors font-bold cursor-pointer">-->
-<!--        Actualités-->
-<!--      </a>-->
       <a (click)="navigateToSection('partners')" class="hover:text-[#EB960B] transition-colors font-bold cursor-pointer">
         Partenaires
       </a>
@@ -83,12 +71,6 @@
     <a (click)="navigateToSection('home')" class="block py-2 text-lg hover:text-[#EB960B]">Accueil</a>
     <a (click)="navigateToSection('hero')" class="block py-2 text-lg hover:text-[#EB960B]">Présentation</a>
     <a (click)="navigateToSection('services')" class="block py-2 text-lg hover:text-[#EB960B]">Services</a>
-     <!--  <a (click)="navigateToSection('solutions')" class="block py-2 text-lg hover:text-[#EB960B]">Solutions</a>
-    <a (click)="navigateToSection('projects')" class="block py-2 text-lg hover:text-[#EB960B]">Projets</a>-->
-<!--    <a (click)="navigateToSection('news')" class="block py-2 text-lg hover:text-[#EB960B]">Actualités</a>-->
-    <a (click)="navigateToSection('realisations')" class="hover:text-[#EB960B] transition-colors font-bold cursor-pointer">
-      Realisations
-    </a>
     <a (click)="navigateToSection('methods')" class="block py-2 text-lg hover:text-[#EB960B]">Méthodes</a>
     <a (click)="navigateToSection('partners')" class="block py-2 text-lg hover:text-[#EB960B]">Partenaires</a>
   </div>

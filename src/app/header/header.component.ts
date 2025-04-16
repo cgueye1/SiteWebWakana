@@ -1,13 +1,13 @@
 import { Component, OnInit, signal, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { fromEvent, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styles: [`
     :host {
@@ -22,7 +22,10 @@ import { takeUntil } from 'rxjs/operators';
 export class HeaderComponent implements OnInit, OnDestroy {
   isMobileMenuOpen = signal(false);
   scrolled = signal(false);
-
+  isDesktop(): boolean {
+    // Vérifier si la largeur de l'écran est supérieure à 1024px (lg dans Tailwind)
+    return window.innerWidth >= 1024;
+  }
   private destroy$ = new Subject<void>();
 
   constructor(private router: Router) {}
